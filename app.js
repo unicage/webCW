@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-const fs = require(fs)
+const fs = require('fs')
 const PORT = 8000
 
 app.set('view engine', 'pug')
@@ -20,8 +20,6 @@ app.get('/', (req, res) => {
         res.render('home', { todos: todos})
     })
 
-
-    res.render('home')
 
 })
 
@@ -47,7 +45,13 @@ app.post('/add', (req, res) => {
             fs.writeFile('./data/todos.json', JSON.stringify(todos), (err) => {
                 if (err) throw err
 
-                res.render('home', {success: true})
+                fs.readFile('./data/todos.json', (err, data) => {
+                    if (err) throw err
+
+                    const todos = JSON.parse(data)
+
+                    res.render('home', {success: true, todos: todos})
+                })
             })
         })
     }
