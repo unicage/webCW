@@ -6,7 +6,7 @@ this app allows users to track their tasks for a day.
 1. Download the source code
 
 ```js
-git clone []
+git clone [https://github.com/unicage/webCW.git]
 ```
 
 or just download the zip file 
@@ -26,4 +26,4 @@ node app
 - pug
 
 #### Link to github repo
-[]
+[https://github.com/unicage/webCW.git]
