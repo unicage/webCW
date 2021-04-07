@@ -1,0 +1,6 @@
+extends layout.pug 
+
+block number1
+    form(action = "/add" method='POST')
+        input(type="text" placeholder="Add your tasks' description for a day" name="day task")
+        button.btn Add 
