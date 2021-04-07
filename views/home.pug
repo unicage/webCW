@@ -2,5 +2,12 @@ extends layout.pug
 
 block number1
     form(action = "/add" method='POST')
-        input(type="text" placeholder="Add your tasks' description for a day" name="day task")
+        input.input(type="text" placeholder="Add your tasks' description for a day" name="todo")
         button.btn Add 
+
+    
+    div.todos
+        if todos.length 
+            each todo in todos 
+                p.todo #{ todo.description }
+            
