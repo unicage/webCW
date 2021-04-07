@@ -1,3 +1,8 @@
+:root {
+    font-family: 'New Tegomin', serif;
+}
+
+
 * {
     margin:0;
     padding: 0;
@@ -26,6 +31,7 @@
     font-size: 1.5rem;
     width: 80%;
     border: 1px solid #ccc;
+    font-family: inherit;
 }
 
 .btn {
@@ -50,6 +56,29 @@
     border-bottom: 1px dotted black;
 }
 
+.todo:last-child {
+    border-bottom: none;
+}
+
 .todo:hover {
     background: #eee;
+}
+
+.error,
+.success {
+    text-align: center;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.error {
+    color: chocolate;
+    border-color: red;
+
+}
+.success {
+    color: green;
+    border-color: green;
 }
