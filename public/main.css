@@ -40,7 +40,7 @@
     font-size: 1.5rem;
     width: 18%;
     border: none;
-    background: brown;
+    background: rgb(42, 151, 165);
     color: #ccc;
 }
 
@@ -51,6 +51,9 @@
 }
 
 .todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
     font-size: 1.5rem;
     border-bottom: 1px dotted black;
@@ -81,4 +84,23 @@
 .success {
     color: green;
     border-color: green;
+}
+
+.delete {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    background: crimson;
+    color: #fff;
+
+}
+
+.done,
+.undone {
+    text-decoration: none;
+    color: darkblue;
+}
+.done {
+    color: darkblue;
+    text-decoration: line-through;
 }
