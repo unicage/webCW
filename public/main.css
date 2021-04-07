@@ -1,5 +1,7 @@
 :root {
     font-family: 'New Tegomin', serif;
+    background-image: url(/static/bg.png);
+    background-size: cover;
 }
 
 
@@ -28,9 +30,12 @@
 .input {
     display: inline-block;
     padding: 10px;
+    margin: 15px;
+    margin-left: 80px;
     font-size: 1.5rem;
     width: 80%;
     border: 1px solid #ccc;
+    border-radius: 10px;
     font-family: inherit;
 }
 
@@ -38,8 +43,10 @@
     display: inline-block;
     padding: 10px 20px;
     font-size: 1.5rem;
-    width: 18%;
+    width: 25%;
+    margin-left: 300px;
     border: none;
+    border-radius: 8px;
     background: rgb(42, 151, 165);
     color: #ccc;
 }
@@ -47,6 +54,7 @@
 .todos {
     margin-top: 25px;
     border: 1px solid #ccc;
+    border-radius: 8px;
     padding: 10px;
 }
 

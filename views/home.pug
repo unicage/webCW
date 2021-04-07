@@ -10,7 +10,9 @@ block number1
     if deleted
         p.success Deleted
     form(action = "/add" method='POST')
-        input.input(type="text" placeholder="Add your tasks' description for a day" name="todo")
+        input.input(type="text" placeholder="Add your tasks' name" name="todo")
+        textarea.input(type="text" placeholder="Add your tasks' description for a day" name="description")
+
         button.btn Add 
 
     
@@ -24,4 +26,4 @@ block number1
                         a.undone(href=`/${todo.id}/update`) #{ todo.description }
                     a.delete(href=`/${todo.id}/delete`) Delete
         else 
-            p.todo No any task available
+            p.todo No task available
