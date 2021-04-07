@@ -14,5 +14,5 @@ app.get('/', (re, res) => {
 app.listen(PORT, (err) => {
     if (err) throw err
 
-    console.log('The app started its work on ${PORT}')
+    console.log(`The app started its work on ${PORT}`)
 })
