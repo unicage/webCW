@@ -27,7 +27,14 @@ app.post('/add', (req, res) => {
     const formData = req.body
 
     if (formData.todo.trim() == '') {
-        res.render('home', {error: true })
+        fs.readFile('./data/todos.json', (err, data) => {
+            if (err) throw err
+
+            const todos = JSON.parse(data)
+
+            res.render('home', {error: true, todos: todos})
+        })
+
     } else {
         fs.readFile('./data/todos.json', (err, data) => {
             if (err) throw err
